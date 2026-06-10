@@ -25,8 +25,7 @@ function App() {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/history");
-
+      const res = await axios.get("https://ai-chatbot-mern-h15i.onrender.com/history");
       const grouped = {};
 
       res.data.forEach((chat) => {
@@ -58,8 +57,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/chat", {
-        message: text,
+      const res = await axios.post("https://ai-chatbot-mern-h15i.onrender.com/chat", {        message: text,
         sessionId: currentSession
       });
 
